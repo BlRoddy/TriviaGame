@@ -5,13 +5,20 @@ body{
 
 
 h1{
+	color:#000000;
 	font-weight:bold;
 	font-size:72px;
 	opacity:1;
 }	
 
+button{
+		padding:5px;
+		margin-bottom:15px;
+}
+
 .main{
 
 	background-color: #ffffff;
 	opacity:.5;
+
 }
