@@ -1,0 +1,17 @@
+body{
+	background-image: url('../images/Kermit.jpg');
+	text-align:center;
+}
+
+
+h1{
+	font-weight:bold;
+	font-size:72px;
+	opacity:1;
+}	
+
+.main{
+
+	background-color: #ffffff;
+	opacity:.5;
+}
