@@ -2,6 +2,9 @@
 
 var questions = [];
 
+var rightAnswers = 0;
+var wrongAnswers = 0;
+
 $('#startButton').on('click', function() {
 
 	$('#startButton').hide();
@@ -96,6 +99,16 @@ $('#startButton').on('click', function() {
 				
 			}	
 		};
+
+		function checkAnswer(correct, wrong1, wrong2, wrong3){
+
+			$(correct).click(function(){
+
+
+
+			});
+
+		}
 
 
 
