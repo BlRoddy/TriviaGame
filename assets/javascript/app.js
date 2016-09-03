@@ -5,7 +5,7 @@ var questions = [];
 $('#startButton').on('click', function() {
 
 	$('#startButton').hide();
-	selectQuestion();
+	
    
    		 var game = {
 
@@ -56,39 +56,48 @@ $('#startButton').on('click', function() {
 			},
 		};	
 
+		selectQuestion();
 
-			function selectQuestion(){
-				if (questions.length < 5){
-				
+		function selectQuestion(){
+			if (questions.length < 5){	
+
 				var question = "question" + Math.ceil(Math.random() * 5);
+
 				while (questions.indexOf(question) !== -1){
+
 					question = "question" + Math.ceil(Math.random() * 5);
 				};
-				
+	
 				questions.push(question);
 				
 				if (question == "question1"){
 					game.q1();
+		
 				}
 				else if (question == "question2"){
 					game.q2();
+				
 				}
 				else if (question == "question3"){
 					game.q3();
+				
 				}
 				else if (question == "question4"){
 					game.q4();
+				
 				}
 				else if (question == "question5"){
 					game.q5();
-				}
 				
+				}	
 			 }
 			
 			else{
-				//
+				
 			}	
 		};
+
+
 
 
 });
