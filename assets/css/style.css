@@ -4,6 +4,13 @@ body{
 }
 
 
+
+
+button{
+		padding:5px;
+		margin-bottom:15px;
+}
+
 h1{
 	color:#000000;
 	font-weight:bold;
@@ -11,14 +18,9 @@ h1{
 	opacity:1;
 }	
 
-button{
-		padding:5px;
-		margin-bottom:15px;
-}
-
 .main{
 
 	background-color: #ffffff;
 	opacity:.5;
-
+	
 }

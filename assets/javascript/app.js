@@ -1,23 +1,61 @@
+//need document ready function 
+
+
+
 $('#startButton').on('click', function() {
-    game.begin();
-})
+   
+    var game = {
+
+    	timer:45,
+
+    q1: function(){	
+		$("#question").html("What song did Elton John play with Miss Piggy and the Electric Mayhem in season 2 of The Muppet Show?");
+		$("#1").html("Rocket Man");
+		$("#2").html("Don't go Breaking my Heart");
+		$("#3").html("Crocodile Rock");
+		$("#4").html("Bennie & the Jets");
+		//answer "Don't go Breaking my Heart"
+	},
 
 
-var questions = {
-		question: "What song did Elton John play with Miss Piggy and the Electric Mayhem in season 2 of The Muppet Show?",
-		choices:["Rocket Man", "Don't go Breaking my Heart", "Crocodile Rock", "Bennie & the Jets"],
-		answer:"Don't go Breaking my Heart"
+	q2: function(){
+		$("#question").html("What instrument does Janice, the only female in Electric Mayhem, play?");
+		$("#1").html("Keyboards");
+		$("#2").html("Bass");
+		$("#3").html("Guitar");
+		$("#4").html("Harmonica");
+		//answer "Guitar"
 	},
-	{
-		question:"What instrument does Janice, the only female in Electric Mayhem, play?",
-		choices:["Keybaords", "Bass", "Guitar", "Harmonica"],
-		answer:"Guitar"
-	},
-	{
-		question:"What are the names of the ever-heckling curmudgeons who sit in the balcony?"
-		choices:["Statler & Waldorf","Bert & Ernie","Enoch & Salinger",]
-		answer:"Statler & Waldorf"
+
+	q3: function(){
+		$("#question").html("What are the names of the ever-heckling curmudgeons who sit in the balcony?");
+		$("#1").html("Statler & Waldorf");
+		$("#2").html("Bert & Ernie");
+		$("#3").html("Enoch & Salinger");
+		$("#4").html("Atticus & Renley");
+		//answer "Statler & Waldorf"
 	};
 
+	q4: function(){
+		$("#question").html("In the film The Great Muppet Caper, what is Kermit and Fozzie's relationship?");
+		$("#1").html("Best Friends");
+		$("#2").html("Cousins");
+		$("#3").html("Boyfriends");
+		$("#4").html("Twins");
+		//answer "Twins"
+		
+	};
+
+	q5: function(){
+		$("#question").html("Where is Miss Piggy from?");
+		$("#1").html("North Carolina")
+		$("#2").html("Iowa");
+		$("#3").html("Nebraska");
+		$("#4").html("Indiana");
+		//answer "Iowa"
+	
+		
+	};
+};
 
 
