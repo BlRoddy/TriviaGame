@@ -8,8 +8,6 @@ $('#startButton').on('click', function() {
    
    		 var game = {
 
-		    timer:45,
-
 		    q1: function(){	
 				$("#question").html("What song did Elton John play with Miss Piggy and the Electric Mayhem in season 2 of The Muppet Show?");
 				$("#1").html("Rocket Man");
@@ -89,7 +87,7 @@ $('#startButton').on('click', function() {
 			 }
 			
 			else{
-				console.log("Game over");
+				//
 			}	
 		};
 
