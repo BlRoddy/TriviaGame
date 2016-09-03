@@ -1,6 +1,6 @@
 //need document ready function 
 
-var selectedQuestions = [];
+var questions = [];
 
 $('#startButton').on('click', function() {
 
@@ -61,44 +61,36 @@ $('#startButton').on('click', function() {
 		selectQuestion();
 		
 			function selectQuestion(){
-				if (selectedQuestions.length < 5){
+				if (questions.length < 5){
 				
 				var question = "question" + Math.ceil(Math.random() * 5);
-				while (selectedQuestions.indexOf(question) !== -1){
+				while (questions.indexOf(question) !== -1){
 					question = "question" + Math.ceil(Math.random() * 5);
 				};
 				
-				selectedQuestions.push(question);
+				questions.push(question);
 				
 				if (question == "question1"){
-					console.log("question1");
 					game.q1();
 				}
 				else if (question == "question2"){
-					console.log("question2");
 					game.q2();
 				}
 				else if (question == "question3"){
-					console.log("question3");
 					game.q3();
 				}
 				else if (question == "question4"){
-					console.log("question4");
 					game.q4();
 				}
 				else if (question == "question5"){
-					console.log("question5");
 					game.q5();
 				}
-				else{
-					console.log("Error: Question was not selected");
-				}
-			}
+				
+			 }
 			
 			else{
 				console.log("Game over");
-			}
-			
+			}	
 		};
 
 });
