@@ -3,6 +3,10 @@
 var questions = [];
 var rightAnswers = 0;
 var wrongAnswers = 0;
+var a1 = $("#1")
+var a2 = $("#2")
+var a3 = $("#3")
+var a4 = $("#4")
 
 $('#startButton').on('click', function() {
 
@@ -18,7 +22,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Crocodile Rock");
 				$("#4").html("Bennie & the Jets");
 				//answer "Don't go Breaking my Heart"
-				checkAnswer()
+				checkAnswer(a2, a1, a3, a4)
 			},
 
 
@@ -29,7 +33,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Guitar");
 				$("#4").html("Harmonica");
 				//answer "Guitar"
-				checkAnswer()
+				checkAnswer(a3, a1, a2, a4)
 			},
 
 			q3: function(){
@@ -39,7 +43,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Enoch & Salinger");
 				$("#4").html("Atticus & Renley");
 				//answer "Statler & Waldorf"
-				checkAnswer()
+				checkAnswer(a1, a2, a3, a4)
 			},
 
 			q4: function(){
@@ -49,7 +53,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Boyfriends");
 				$("#4").html("Twins");
 				//answer "Twins"	
-				checkAnswer()
+				checkAnswer(a4, a1, a2, a3)
 			},
 
 			q5: function(){
@@ -59,7 +63,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Nebraska");
 				$("#4").html("Indiana");
 				//answer "Iowa"		
-				checkAnswer()		
+				checkAnswer(a2, a1, a3, a4)		
 			},
 		};	
 
@@ -95,6 +99,8 @@ $('#startButton').on('click', function() {
 			 }
 			
 			else{
+
+				gameOver();
 				
 			}	
 		};
@@ -104,15 +110,12 @@ $('#startButton').on('click', function() {
 			$(correct).click(function(){
 
 				rightAnswers++
-				$("#factCheck").html("You got it!");
 				selectQuestion();
-
 			});
 
 			$(wrong1).click(function(){
 
 				wrongAnswers++
-				$("#factCheck").html("That's not it, sorry!");
 				selectQuestion();
 
 			});
@@ -120,7 +123,6 @@ $('#startButton').on('click', function() {
 			$(wrong2).click(function(){
 
 				wrongAnswers++
-				$("#factCheck").html("That's not it, sorry!");
 				selectQuestion();
 				
 			});
@@ -128,7 +130,6 @@ $('#startButton').on('click', function() {
 			$(wrong3).click(function(){
 
 				wrongAnswers++
-				$("#factCheck").html("That's not it, sorry!");
 				selectQuestion();
 				
 			});
