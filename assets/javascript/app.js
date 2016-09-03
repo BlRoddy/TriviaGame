@@ -1,7 +1,6 @@
 //need document ready function 
 
 var questions = [];
-
 var rightAnswers = 0;
 var wrongAnswers = 0;
 
@@ -19,6 +18,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Crocodile Rock");
 				$("#4").html("Bennie & the Jets");
 				//answer "Don't go Breaking my Heart"
+				checkAnswer()
 			},
 
 
@@ -29,6 +29,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Guitar");
 				$("#4").html("Harmonica");
 				//answer "Guitar"
+				checkAnswer()
 			},
 
 			q3: function(){
@@ -38,6 +39,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Enoch & Salinger");
 				$("#4").html("Atticus & Renley");
 				//answer "Statler & Waldorf"
+				checkAnswer()
 			},
 
 			q4: function(){
@@ -47,6 +49,7 @@ $('#startButton').on('click', function() {
 				$("#3").html("Boyfriends");
 				$("#4").html("Twins");
 				//answer "Twins"	
+				checkAnswer()
 			},
 
 			q5: function(){
@@ -55,7 +58,8 @@ $('#startButton').on('click', function() {
 				$("#2").html("Iowa");
 				$("#3").html("Nebraska");
 				$("#4").html("Indiana");
-				//answer "Iowa"				
+				//answer "Iowa"		
+				checkAnswer()		
 			},
 		};	
 
@@ -74,24 +78,19 @@ $('#startButton').on('click', function() {
 				questions.push(question);
 				
 				if (question == "question1"){
-					game.q1();
-		
+					game.q1();	
 				}
 				else if (question == "question2"){
-					game.q2();
-				
+					game.q2();			
 				}
 				else if (question == "question3"){
-					game.q3();
-				
+					game.q3();				
 				}
 				else if (question == "question4"){
-					game.q4();
-				
+					game.q4();				
 				}
 				else if (question == "question5"){
-					game.q5();
-				
+					game.q5();				
 				}	
 			 }
 			
@@ -104,11 +103,37 @@ $('#startButton').on('click', function() {
 
 			$(correct).click(function(){
 
-
+				rightAnswers++
+				$("#factCheck").html("You got it!");
+				selectQuestion();
 
 			});
 
-		}
+			$(wrong1).click(function(){
+
+				wrongAnswers++
+				$("#factCheck").html("That's not it, sorry!");
+				selectQuestion();
+
+			});
+
+			$(wrong2).click(function(){
+
+				wrongAnswers++
+				$("#factCheck").html("That's not it, sorry!");
+				selectQuestion();
+				
+			});
+
+			$(wrong3).click(function(){
+
+				wrongAnswers++
+				$("#factCheck").html("That's not it, sorry!");
+				selectQuestion();
+				
+			});
+
+		};
 
 
 
