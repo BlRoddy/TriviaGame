@@ -5,6 +5,7 @@ var questions = [];
 $('#startButton').on('click', function() {
 
 	$('#startButton').hide();
+	selectQuestion();
    
    		 var game = {
 
@@ -56,8 +57,6 @@ $('#startButton').on('click', function() {
 		};	
 
 
-		selectQuestion();
-		
 			function selectQuestion(){
 				if (questions.length < 5){
 				
@@ -90,5 +89,6 @@ $('#startButton').on('click', function() {
 				//
 			}	
 		};
+
 
 });
